@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  news_parsing:
+    build: .
+    platform: linux/amd64
+    container_name: news_parsing
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8080:8000"
